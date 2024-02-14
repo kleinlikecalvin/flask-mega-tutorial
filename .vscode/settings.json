@@ -1,0 +1,10 @@
+{
+  // extensions needed here should be automatically installed by Dev Containers
+  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 2,
+    "diffEditor.ignoreTrimWhitespace": false,
+  }
+}

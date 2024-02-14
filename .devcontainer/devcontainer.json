@@ -1,0 +1,17 @@
+{
+  "name": "flask-environment",
+  "build": {
+    "dockerfile": "${localWorkspaceFolder}/Dockerfile",
+    "context": "${localWorkspaceFolder}"
+  },
+  "workspaceFolder": "/usr/src/app",
+  "workspaceMount": "type=bind,source=${localWorkspaceFolder},target=/usr/src/app",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.autopep8"
+      ]
+    }
+  }
+}
