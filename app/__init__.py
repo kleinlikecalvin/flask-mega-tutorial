@@ -1,4 +1,8 @@
 from flask import Flask
-app = Flask(__name__)
+from config import Config
 
+app = Flask(__name__)
+app.config.from_object(Config)
+
+# fmt:off
 from app import routes
