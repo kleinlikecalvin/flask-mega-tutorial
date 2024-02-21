@@ -9,7 +9,7 @@ def index():
     user = {'username': 'Miguel'}
     posts = [
         {
-            'author': {'username': 'Groot'},
+            'author': {'username': 'Scott'},
             'body': 'Beautiful day in Scotland!'
         },
         {
