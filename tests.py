@@ -1,11 +1,14 @@
-from app.models import User, Post
-from app import app, db
-import unittest
-from datetime import datetime, timezone, timedelta
+# fmt:off
 import os
 os.environ['DATABASE_URL'] = 'sqlite://'
+from datetime import datetime, timezone, timedelta
+import unittest
+from app import app, db
+from app.models import User, Post
 
 
+
+# fmt:on
 class UserModelCase(unittest.TestCase):
     def setUp(self):
         self.app_context = app.app_context()
