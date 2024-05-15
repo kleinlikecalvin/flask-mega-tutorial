@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-17 00:25+0000\n"
+"POT-Creation-Date: 2024-05-15 23:51+0000\n"
 "PO-Revision-Date: 2024-04-17 00:28+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -62,48 +62,61 @@ msgstr "Soumettre"
 msgid "Say something"
 msgstr "Dire quelque chose"
 
-#: app/routes.py:28
+#: app/routes.py:36
 msgid "Your post is now live!"
 msgstr "Votre publication est maintenant en ligne !"
 
-#: app/routes.py:51
+#: app/routes.py:59
 msgid "Invalid username or password"
 msgstr "Nom d'utilisateur ou mot de passe incorrect"
 
-#: app/routes.py:77
+#: app/routes.py:85
 msgid "Congratulations, you are now a registered user!"
 msgstr "Félicitations, vous êtes maintenant un utilisateur enregistré !"
 
-#: app/routes.py:108
+#: app/routes.py:116
 msgid "Your changes have been saved."
 msgstr "Vos modifications ont été enregistrées."
 
-#: app/routes.py:125 app/routes.py:147
+#: app/routes.py:133 app/routes.py:155
 msgid "User %(username) not found."
 msgstr "Utilisateur %(username) non trouvé."
 
-#: app/routes.py:128
+#: app/routes.py:136
 msgid "You cannot follow yourself!"
 msgstr "Vous ne pouvez pas vous suivre !"
 
-#: app/routes.py:132
+#: app/routes.py:140
 msgid "You are following %(username)!"
 msgstr "Vous suivez %(username) !"
 
-#: app/routes.py:150
+#: app/routes.py:158
 msgid "You cannot unfollow yourself!"
 msgstr "Vous ne pouvez pas vous désabonner de vous-même !"
 
-#: app/routes.py:154
+#: app/routes.py:162
 msgid "You are not following %(username)."
 msgstr "Vous ne suivez pas %(username)."
+
+#: app/translate.py:9
+msgid "Error: the translation service is not configured."
+msgstr ""
+
+#: app/translate.py:19
+msgid "Error: the translation service failed."
+msgstr ""
 
 #: app/templates/_post.html:10
 #, python-format
 msgid "%(username)s said (%(when)s)"
 msgstr "%(username)s a dit (%(when)s)"
 
+#: app/templates/_post.html:22
+msgid "Translate"
+msgstr ""
+
 #: app/templates/index.html:4
 #, python-format
 msgid "Hi, %(username)s!"
 msgstr "Salut, %(username)s !"
+
