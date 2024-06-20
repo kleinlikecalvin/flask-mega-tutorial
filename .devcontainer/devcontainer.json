@@ -1,11 +1,8 @@
 {
   "name": "flask-environment",
-  "build": {
-    "dockerfile": "${localWorkspaceFolder}/Dockerfile",
-    "context": "${localWorkspaceFolder}"
-  },
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "microblog",
   "workspaceFolder": "/usr/src/app",
-  "workspaceMount": "type=bind,source=${localWorkspaceFolder},target=/usr/src/app",
   "customizations": {
     "vscode": {
       "extensions": [

@@ -1,0 +1,34 @@
+name: flask-composed-microblog
+
+services:
+  microblog:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - type: bind
+        source: .
+        target: /usr/src/app
+    ports:
+      - "8000:5000"
+    environment:
+      - SECRET_KEY=my-secret-key
+      - MAIL_SERVER=smtp.googlemail.com
+      - MAIL_PORT=587
+      - MAIL_USE_TLS=true
+      - DATABASE_URL=mysql+pymysql://microblog:$MYSQL_PASSWORD@mysql/microblog
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+    env_file: .env
+  mysql:
+    image: mysql:latest
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_DATABASE=microblog
+    env_file: .env
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.1
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
