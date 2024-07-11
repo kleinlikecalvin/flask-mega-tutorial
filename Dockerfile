@@ -15,4 +15,4 @@ RUN flask translate compile
 RUN pip install gunicorn pymysql cryptography
 
 EXPOSE 5000
-ENTRYPOINT ["./boot.sh"]
+CMD ["./boot.sh"]
