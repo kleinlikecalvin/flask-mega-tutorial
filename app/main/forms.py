@@ -8,6 +8,12 @@ from app import db
 from app.models import User
 
 
+class MessageForm(FlaskForm):
+    message = TextAreaField(_l('Message'), validators=[
+                            DataRequired(), Length(min=0, max=140)])
+    submit = SubmitField(_l('Submit'))
+
+
 class EditProfileForm(FlaskForm):
     username = StringField(_l('Username'), validators=[DataRequired()])
     about_me = TextAreaField(_l('About me'),
